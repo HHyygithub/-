@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+    <title></title>
+    <script type="text/javascript">
+   		
+    </script>
+</head>
+<body>
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide back1">
+	        	<div class="up ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="2s" swiper-animate-delay="0s"></div>
+	        	<div class="up2 ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="3s" swiper-animate-delay="0s"></div>
+	        	<div class="up3 ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="4s" swiper-animate-delay="0s"></div>
+	        </div>
+	        <div class="swiper-slide back2">
+	        	<div class="con ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="2s" swiper-animate-delay="0s"></div>
+	        	<div class="txt ani" swiper-animate-effect="zoomIn" swiper-animate-duration="3s" swiper-animate-delay="0s">四年前<br />我们刚刚踏进校园的时候<br />18岁的我我们懵懵懂懂<br />虽然对于未来无限的憧憬<br />却不知道在这里学到什么<br />收获的什么<br />幸好一路上有师长的谆谆教诲 </div>
+	        </div>
+	        <div class="swiper-slide back3">
+	        	<div class="txt2 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="2s">
+	        		那一年 我们背起行囊<br />走进金秋九月的大学林荫小道<br />新生扎到的第一课堂就像是昨天
+	        	</div>
+	        	<div class="pic1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2.5s" swiper-animate-delay="0s">
+	        		<img src="img/20151215_120720.jpg"/>
+	        	</div>
+	        	<div class="pic1 pic2 ani"  swiper-animate-effect="fadeInRight" swiper-animate-duration="2.5s" swiper-animate-delay="0s">
+	        		<img src="img/20151215_120714.jpg"/>
+	        	</div>
+	        </div>
+	        <div class="swiper-slide back4">
+	        	<div class="txt2 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="2s">
+	        		那节课 我们走出教室<br />踏进足球场认识了我们最和蔼的老师<br />一直陪伴我们两年
+	        	</div>
+	        	
+	        	<div class="pic1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="2.5s" swiper-animate-delay="0s">
+	        		<img src="img/20151215_120444.jpg"/>
+	        	</div>
+	        	<div class="pic1 pic2 ani"  swiper-animate-effect="fadeInRight" swiper-animate-duration="2.5s" swiper-animate-delay="0s">
+	        		<img src="img/20160424_154145.jpg"/>
+	        	</div>
+	        </div>
+	        <div class="swiper-slide back5">
+	        	<div class="txt2 ani txt3" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="2s">
+	        		我知道<br />日后的你我不管收到多大的委屈<br />想到我挚爱的你（校园）啊<br />大学就是我们的青春·也是最美好的行囊<br />记录成长的地方 各位同学我们珍重再见
+	        	</div>
+	        	<div class="left-pic ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="2.5s" swiper-animate-delay="0s">
+	        		<img src="img/20160424_165433.jpg.JPG"/>
+	        	</div>
+	        	<div class="right ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="2.5s" swiper-animate-delay="0s">
+	        		<img src="img/20160229_100743.jpg.JPG"/>
+	        	</div>
+	        </div>
+	        <div class="swiper-slide back6">
+	        	<div class="bottom ani" swiper-animate-effect="flipInX" swiper-animate-duration="2.5s" swiper-animate-delay="0s">
+	        		<img src="img/fb9973a4-4382-44bb-a6bd-23cfa9acc803.png"/>
+	        	</div>
+	        </div>
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	</div>
+</body>
+<script src="js/swiper-3.3.1.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper('.swiper-container',{
+    		direction:'vertical',
+    		loop:true,
+   			pagination:'.swiper-pagination',
+    		onInit:function(swiper){       //Swiper2.x的初始化是onFirstInit
+			    swiperAnimateCache(swiper); //隐藏动画元素 
+			    swiperAnimate(swiper);      //初始化完成开始动画
+			}, 
+			  	onSlideChangeEnd:function(swiper){ 
+			    swiperAnimate(swiper);      //每个slide切换结束时也运行当前slide动画
+			} 
+		})
+</script>
+</html>
